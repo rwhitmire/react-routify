@@ -97,3 +97,9 @@ Route information can be accessed via `props.route`
 ``` javascript
 const User = ({route}) => <div>{route.params.id}</div>
 ```
+
+### Navigation
+``` javascript
+import { navigate } from 'react-routify'
+navigate('/about')
+```
