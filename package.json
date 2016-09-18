@@ -1,6 +1,6 @@
 {
-  "name": "router",
-  "version": "1.0.0",
+  "name": "react-routify",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
