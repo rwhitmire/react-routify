@@ -1,6 +1,6 @@
 # react-routify
 
-The purpose of this library is to provide routing to React projects without
+The purpose of this library is to provide routing to React applications without
 scattering domain specific language throughout your codebase.
 
 ### Quick Start
@@ -27,6 +27,10 @@ class App extends Component {
   render() {
     return (
       <div>
+        <nav>
+          <a href="/">home</a>
+          <a href="/about">about</a>
+        </nav>
         <Router routes={routes} />
       </div>
     )
