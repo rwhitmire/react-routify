@@ -2,9 +2,11 @@
   "name": "react-routify",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel -d lib/ src/",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "react",
@@ -22,6 +24,7 @@
     "react": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.14.0",
     "babel-jest": "^15.0.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
