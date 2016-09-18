@@ -6,9 +6,15 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "router",
+    "route",
+    "routes",
+    "routing"
+  ],
+  "author": "Ryan Whitmire",
+  "license": "MIT",
   "dependencies": {
     "page": "^1.7.1"
   },
