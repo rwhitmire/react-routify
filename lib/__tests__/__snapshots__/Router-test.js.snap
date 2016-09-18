@@ -1,0 +1,17 @@
+exports[`test navigate should update the component 1`] = `
+<div>
+  home
+</div>
+`;
+
+exports[`test navigate should update the component 2`] = `
+<div>
+  about
+</div>
+`;
+
+exports[`test route information should exist on props 1`] = `
+<div>
+  shinfo
+</div>
+`;
