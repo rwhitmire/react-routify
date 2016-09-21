@@ -10,6 +10,7 @@
   },
   "keywords": [
     "react",
+    "redux",
     "router",
     "route",
     "routes",
@@ -30,6 +31,12 @@
     "babel-preset-react": "^6.11.1",
     "jest": "^15.1.1",
     "react": "^15.3.1",
-    "react-test-renderer": "^15.3.1"
+    "react-test-renderer": "^15.3.1",
+    "redux": "^3.6.0"
+  },
+  "jest": {
+    "testPathDirs": [
+      "src"
+    ]
   }
 }

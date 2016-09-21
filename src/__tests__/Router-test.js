@@ -7,18 +7,20 @@ import Router from '../Router'
 import createRoute from '../createRoute'
 import beginRouting from '../beginRouting'
 
+test('default state should render null', () => {
+  const Home = () => <div>home</div>
+  const routes = [{ path: '/', component: Home }]
+  const component = renderer.create(<Router routes={routes} />)
+  const tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 test('beginRouting should be called', () => {
   const Home = () => <div>home</div>
-
-  const routes = [
-    { path: '/', component: Home }
-  ]
-
-  const router = <Router routes={routes} />
-
-  renderer.create(<Router routes={routes} />);
-  expect(beginRouting).toBeCalled();
-});
+  const routes = [{ path: '/', component: Home }]
+  renderer.create(<Router routes={routes} />)
+  expect(beginRouting).toBeCalled()
+})
 
 test('navigate should update the component', () => {
   const createRouteCallbacks = {}
@@ -35,19 +37,18 @@ test('navigate should update the component', () => {
     { path: '/about', component: About }
   ]
 
-  const router = <Router routes={routes} />
-  const component = renderer.create(<Router routes={routes} />);
+  const component = renderer.create(<Router routes={routes} />)
 
   let tree
 
   createRouteCallbacks['/']()
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
 
   createRouteCallbacks['/about']()
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
 
 test('route information should exist on props', () => {
   const createRouteCallbacks = {}
@@ -62,10 +63,9 @@ test('route information should exist on props', () => {
     { path: '/', component: Home },
   ]
 
-  const router = <Router routes={routes} />
-  const component = renderer.create(<Router routes={routes} />);
+  const component = renderer.create(<Router routes={routes} />)
 
   createRouteCallbacks['/']({params: {info: 'shinfo'}})
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  const tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})

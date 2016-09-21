@@ -11,9 +11,3 @@ exports[`test navigate should update the component 2`] = `
   about
 </div>
 `;
-
-exports[`test route information should exist on props 1`] = `
-<div>
-  shinfo
-</div>
-`;

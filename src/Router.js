@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes, createElement } from 'react'
 import createRoute from './createRoute'
 import beginRouting from './beginRouting'
 
@@ -7,16 +7,17 @@ class Router extends Component {
     super()
 
     this.state = {
-      component: null
+      component: null,
+      context: null
     }
   }
 
   componentDidMount() {
     this.props.routes.forEach(route => {
-      createRoute(route.path, (ctx) => {
+      createRoute(route.path, (context) => {
         this.setState({
           component: route.component,
-          ctx
+          context
         })
       })
     })
@@ -29,10 +30,14 @@ class Router extends Component {
       return null
     }
 
-    return React.createElement(this.state.component, {
-      route: this.state.ctx
+    return createElement(this.state.component, {
+      route: this.state.context
     })
   }
+}
+
+Router.propTypes = {
+  routes: PropTypes.array.isRequired
 }
 
 export default Router
