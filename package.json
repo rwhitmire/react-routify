@@ -5,7 +5,7 @@
   "main": "lib/index",
   "scripts": {
     "test": "npm run lint && jest",
-    "build": "babel -d lib/ src/",
+    "build": "babel -d lib/ src/ --ignore *-test.js",
     "prepublish": "npm run build",
     "lint": "eslint src"
   },
