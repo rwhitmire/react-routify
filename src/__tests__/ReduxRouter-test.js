@@ -83,7 +83,7 @@ test('route information should exist on store', () => {
   )
 
   createRouteCallbacks['/']({path: '/about'})
-  expect(store.getState().route.context.path).toBe('/about')
+  expect(store.getState().route.path).toBe('/about')
 })
 
 test('state updates should trigger replaceHistoryState', () => {

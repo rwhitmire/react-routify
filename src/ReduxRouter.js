@@ -27,7 +27,7 @@ class ReduxRouter extends Component {
       const state = store.getState()
 
       // update the url without modifying history
-      replaceHistoryState(state.route.context.path)
+      replaceHistoryState(state.route.path)
 
       this.setState({
         component: state.route._private.component,

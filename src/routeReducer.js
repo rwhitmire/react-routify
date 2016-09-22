@@ -1,13 +1,11 @@
 import { LOCATION_CHANGE } from './actionCreators'
 
-export default function(state = {context: { path: '/' }, _private: {}}, action) {
+export default function(state = { path: '/', _private: {}}, action) {
   switch(action.type) {
   case LOCATION_CHANGE:
     return {
-      context: action.context,
-      _private: {
-        component: action._private.component
-      }
+      _private: { component: action.component },
+      ...action.context
     }
   default:
     return state
