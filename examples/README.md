@@ -1,0 +1,1 @@
+`npm run build` at the root of the project before attempting to run example projects.

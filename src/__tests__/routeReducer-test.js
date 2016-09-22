@@ -4,7 +4,7 @@ import { changeLocation } from '../actionCreators'
 
 test('location change should return default state', () => {
   const state = reducer(undefined, {})
-  expect(state.context).toBeNull()
+  expect(state.context).toEqual({'path': '/'})
   expect(state._private).toEqual({})
 })
 
