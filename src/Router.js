@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, createElement } from 'react'
+import { Component, PropTypes, createElement } from 'react'
 import createRoute from './createRoute'
 import beginRouting from './beginRouting'
 

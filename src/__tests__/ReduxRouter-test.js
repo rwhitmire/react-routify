@@ -74,11 +74,11 @@ test('route information should exist on store', () => {
     createRouteCallbacks[path] = callback
   })
 
-  const Home = ({ route }) => <div>Home</div>
+  const Home = () => <div>Home</div>
   const routes = [{ path: '/', component: Home }]
   const store = createTestStore()
 
-  const component = renderer.create(
+  renderer.create(
     <ReduxRouter routes={routes} store={store} />
   )
 
@@ -87,11 +87,11 @@ test('route information should exist on store', () => {
 })
 
 test('state updates should trigger replaceHistoryState', () => {
-  const Home = ({ route }) => <div>Home</div>
+  const Home = () => <div>Home</div>
   const routes = [{ path: '/', component: Home }]
   const store = createTestStore()
 
-  const component = renderer.create(
+  renderer.create(
     <ReduxRouter routes={routes} store={store} />
   )
 
