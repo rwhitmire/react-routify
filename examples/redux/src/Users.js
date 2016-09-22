@@ -3,13 +3,11 @@ import { connect } from 'react-redux'
 
 class Users extends Component {
   render() {
-    const foo = this.props
-
     return (
       <div>
         Users: {this.props.route.params.id}
       </div>
-    );
+    )
   }
 }
 
