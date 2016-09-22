@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { ReduxRouter, routeReducer } from '../../../lib'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
+import Users from './Users'
 
 const rootReducer = combineReducers({
   route: routeReducer
@@ -12,7 +13,6 @@ const store = createStore(rootReducer, window.devToolsExtension && window.devToo
 
 const Home = () => <div>Home</div>
 const About = () => <div>About</div>
-const Users = () => <div>Users</div>
 
 const routes = [
   { path: '/', component: Home },
