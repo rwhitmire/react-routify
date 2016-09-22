@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index",
   "scripts": {
-    "test": "npm run lint && npm build && jest",
+    "test": "npm run lint && npm run build && jest",
     "build": "babel -d lib/ src/ --ignore *-test.js",
     "prepublish": "npm run build",
     "lint": "eslint src"
