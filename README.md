@@ -1,4 +1,4 @@
-# react-routify
+# React Routify [![Build Status](https://travis-ci.org/rwhitmire/react-routify.svg?branch=master)](https://travis-ci.org/rwhitmire/react-routify)
 
 The purpose of this library is to provide routing to React applications without
 scattering domain specific language throughout your codebase.
