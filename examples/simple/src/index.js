@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from '../../../lib'
+import { Router, Link } from '../../../lib'
 
 const Home = () => <div>Home</div>
 const About = () => <div>About</div>
@@ -14,9 +14,9 @@ const routes = [
 
 const rootComponent = (
   <div>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/users/10">user 10</a>
+    <Link href="/">Home</Link>
+    <Link href="/about">About</Link>
+    <Link href="/users/10">user 10</Link>
     <Router routes={routes} />
   </div>
 )

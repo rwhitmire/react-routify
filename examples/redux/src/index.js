@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ReduxRouter, routeReducer } from '../../../lib'
+import { ReduxRouter, routeReducer, Link } from '../../../lib'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import Users from './Users'
@@ -23,9 +23,9 @@ const routes = [
 const rootComponent = (
   <Provider store={store}>
     <div>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/users/10">user 10</a>
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/users/10">user 10</Link>
       <ReduxRouter routes={routes} store={store} />
     </div>
   </Provider>
