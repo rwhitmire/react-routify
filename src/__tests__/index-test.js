@@ -2,7 +2,8 @@ import {
   Router,
   ReduxRouter,
   navigate,
-  routeReducer
+  routeReducer,
+  Link
 } from '../index'
 
 test('modules should be exported', () => {
@@ -10,4 +11,5 @@ test('modules should be exported', () => {
   expect(ReduxRouter).toBeDefined()
   expect(navigate).toBeDefined()
   expect(routeReducer).toBeDefined()
+  expect(Link).toBeDefined()
 })

@@ -1,0 +1,6 @@
+exports[`test Link should render 1`] = `
+<a
+  className="some-class"
+  href="/nowhere"
+  id="something" />
+`;
