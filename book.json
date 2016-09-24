@@ -1,0 +1,14 @@
+{
+  "gitbook": "3.x.x",
+  "title": "React Routify",
+  "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/rwhitmire/react-routify/tree/master",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/rwhitmire/react-routify"
+    }
+  }
+}
