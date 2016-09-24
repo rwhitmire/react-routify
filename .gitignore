@@ -21,8 +21,9 @@ Thumbs.db
 # NPM packages folder.
 node_modules/
 
-# Build folder
+# Build folders
 lib
+_book
 
 # Editor assets
 .vscode

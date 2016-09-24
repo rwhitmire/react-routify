@@ -7,7 +7,12 @@
     "test": "npm run lint && npm run build && jest",
     "build": "babel -d lib/ src/ --ignore *-test.js",
     "prepublish": "npm run build",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "docs:clean": "rimraf _book",
+    "docs:prepare": "gitbook install",
+    "docs:build": "npm run docs:prepare && gitbook build",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:publish": "npm run docs:clean && npm run docs:build && cd _book && git init && git commit --allow-empty -m 'update docs' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update docs' && git push https://github.com/rwhitmire/react-routify.git gh-pages --force"
   },
   "keywords": [
     "react",
@@ -33,10 +38,12 @@
     "babel-preset-stage-2": "^6.13.0",
     "eslint": "^3.5.0",
     "eslint-plugin-react": "^6.3.0",
+    "gitbook-cli": "^2.3.0",
     "jest": "^15.1.1",
     "react": "^15.3.1",
     "react-test-renderer": "^15.3.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "rimraf": "^2.5.4"
   },
   "jest": {
     "testPathDirs": [
