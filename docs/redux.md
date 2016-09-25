@@ -5,7 +5,7 @@ React Routify supports Redux out of the box.
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ReduxRouter, routeReducer } from 'react-router'
+import { ReduxRouter, routeReducer } from 'react-routify'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 
