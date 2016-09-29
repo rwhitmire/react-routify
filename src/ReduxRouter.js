@@ -3,6 +3,7 @@ import createRoute from './createRoute'
 import beginRouting from './beginRouting'
 import replaceHistoryState from './replaceHistoryState'
 import { changeLocation } from './actionCreators'
+import internalStore from './store'
 
 class ReduxRouter extends Component {
   constructor() {
@@ -28,6 +29,7 @@ class ReduxRouter extends Component {
 
       // update the url without modifying history
       replaceHistoryState(state.route.path)
+      internalStore.emitChange({path: state.route.path})
 
       this.setState({
         component: state.route._private.component,

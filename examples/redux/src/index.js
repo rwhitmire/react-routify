@@ -23,9 +23,9 @@ const routes = [
 const rootComponent = (
   <Provider store={store}>
     <div>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/users/10">user 10</Link>
+      <Link to="/" activeClassName="active">Home</Link>
+      <Link to="/about" activeClassName="active">About</Link>
+      <Link to="/users/10" activeClassName="active">user 10</Link>
       <ReduxRouter routes={routes} store={store} />
     </div>
   </Provider>

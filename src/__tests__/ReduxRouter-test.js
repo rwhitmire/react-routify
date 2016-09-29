@@ -1,6 +1,7 @@
 jest.mock('../createRoute')
 jest.mock('../beginRouting')
 jest.mock('../replaceHistoryState')
+jest.mock('../store')
 
 import { createStore, combineReducers } from 'redux'
 import React from 'react'
@@ -10,6 +11,7 @@ import createRoute from '../createRoute'
 import beginRouting from '../beginRouting'
 import replaceHistoryState from '../replaceHistoryState'
 import routeReducer from '../routeReducer'
+import internalStore from '../store'
 import { changeLocation } from '../actionCreators'
 
 const createTestStore = () => {
@@ -97,4 +99,17 @@ test('state updates should trigger replaceHistoryState', () => {
 
   store.dispatch(changeLocation(Home, {}))
   expect(replaceHistoryState).toBeCalled()
+})
+
+test('state updates should trigger store emitChange', () => {
+  const Home = () => <div>Home</div>
+  const routes = [{ path: '/', component: Home }]
+  const store = createTestStore()
+
+  renderer.create(
+    <ReduxRouter routes={routes} store={store} />
+  )
+
+  store.dispatch(changeLocation(Home, {}))
+  expect(internalStore.emitChange).toBeCalled()
 })

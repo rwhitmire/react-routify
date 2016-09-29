@@ -23,8 +23,8 @@ class App extends Component {
     return (
       <div>
         <nav>
-          <Link to="/">home</Link>
-          <Link to="/about">about</Link>
+          <Link to="/" activeClassName="active">home</Link>
+          <Link to="/about" activeClassName="active">about</Link>
         </nav>
         <Router routes={routes} />
       </div>
