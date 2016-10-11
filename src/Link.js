@@ -8,20 +8,20 @@ class Link extends Component {
     this.state = {
       active: store.getPath() === props.to
     }
-  }
 
-  _onChange(ctx) {
-    this.setState({
-      active: ctx.path === this.props.to
-    })
+    this._onChange = ctx => {
+      this.setState({
+        active: ctx.path === this.props.to
+      })
+    }
   }
 
   componentDidMount() {
-    store.addChangeListener(this._onChange.bind(this))
+    store.addChangeListener(this._onChange)
   }
 
   componentWillUnmount() {
-    store.removeChangeListener(this._onChange.bind(this))
+    store.removeChangeListener(this._onChange)
   }
 
   render() {

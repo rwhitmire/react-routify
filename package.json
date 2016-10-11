@@ -1,6 +1,6 @@
 {
   "name": "react-routify",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A routing library for React applications",
   "main": "lib/index",
   "scripts": {
