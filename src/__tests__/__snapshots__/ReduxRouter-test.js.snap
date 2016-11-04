@@ -1,0 +1,13 @@
+exports[`test default state should render null 1`] = `null`;
+
+exports[`test navigate should update the component 1`] = `
+<div>
+  home
+</div>
+`;
+
+exports[`test navigate should update the component 2`] = `
+<div>
+  about
+</div>
+`;

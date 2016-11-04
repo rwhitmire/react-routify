@@ -1,0 +1,62 @@
+exports[`test Link should apply activeClassName 1`] = `
+<a
+  className="active"
+  href="/nowhere"
+  id="something" />
+`;
+
+exports[`test Link should merge className and activeClassName 1`] = `
+<a
+  className="foo active"
+  href="/nowhere"
+  id="something" />
+`;
+
+exports[`test Link should render 1`] = `
+<a
+  className="some-class"
+  href="/nowhere"
+  id="something" />
+`;
+
+exports[`test Link should update active state onRouteChange 1`] = `
+<div>
+  <a
+    className="active"
+    href="/foo">
+    foo
+  </a>
+  <a
+    href="/bar">
+    bar
+  </a>
+</div>
+`;
+
+exports[`test Link should update active state onRouteChange 2`] = `
+<div>
+  <a
+    href="/foo">
+    foo
+  </a>
+  <a
+    className="active"
+    href="/bar">
+    bar
+  </a>
+</div>
+`;
+
+exports[`test Link should update active state onRouteChange 3`] = `
+<div>
+  <a
+    className="active"
+    href="/foo">
+    foo
+  </a>
+  <a
+    href="/bar">
+    bar
+  </a>
+</div>
+`;
