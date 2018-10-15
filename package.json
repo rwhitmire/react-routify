@@ -1,6 +1,6 @@
 {
   "name": "react-routify",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A routing library for React applications",
   "main": "lib/index",
   "scripts": {
@@ -28,7 +28,8 @@
     "page": "^1.7.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^15.0.0 || ^16.5.2",
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -40,8 +41,9 @@
     "eslint-plugin-react": "^6.3.0",
     "gitbook-cli": "^2.3.0",
     "jest": "^15.1.1",
-    "react": "^15.3.2",
-    "react-test-renderer": "^15.3.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-test-renderer": "^16.5.2",
     "redux": "^3.6.0",
     "rimraf": "^2.5.4"
   },
